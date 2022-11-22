@@ -1,0 +1,38 @@
+H1: https://upload.wikimedia.org/wikipedia/commons/d/d4/English_pattern_ace_of_hearts.svg
+S1: https://upload.wikimedia.org/wikipedia/commons/1/19/English_pattern_ace_of_spades.svg
+
+H2: https://upload.wikimedia.org/wikipedia/commons/2/26/English_pattern_2_of_hearts.svg
+S2: https://upload.wikimedia.org/wikipedia/commons/0/0b/English_pattern_2_of_spades.svg
+
+H3: https://upload.wikimedia.org/wikipedia/commons/0/0f/English_pattern_3_of_hearts.svg
+S3: https://upload.wikimedia.org/wikipedia/commons/a/a5/English_pattern_3_of_spades.svg
+
+H4: https://upload.wikimedia.org/wikipedia/commons/b/bb/English_pattern_4_of_hearts.svg
+S4: https://upload.wikimedia.org/wikipedia/commons/3/34/English_pattern_4_of_spades.svg
+
+H5: https://upload.wikimedia.org/wikipedia/commons/c/c6/English_pattern_5_of_hearts.svg
+S5: https://upload.wikimedia.org/wikipedia/commons/9/9c/English_pattern_5_of_spades.svg
+
+H6: https://upload.wikimedia.org/wikipedia/commons/d/da/English_pattern_6_of_hearts.svg
+S6: https://upload.wikimedia.org/wikipedia/commons/a/ac/English_pattern_6_of_spades.svg
+
+H7: https://upload.wikimedia.org/wikipedia/commons/c/cb/English_pattern_7_of_hearts.svg
+S7: https://upload.wikimedia.org/wikipedia/commons/d/d1/English_pattern_7_of_spades.svg
+
+H8: https://upload.wikimedia.org/wikipedia/commons/3/3c/English_pattern_8_of_hearts.svg
+S8: https://upload.wikimedia.org/wikipedia/commons/4/4d/English_pattern_8_of_spades.svg
+
+H9: https://upload.wikimedia.org/wikipedia/commons/2/22/English_pattern_9_of_hearts.svg
+S9: https://upload.wikimedia.org/wikipedia/commons/f/f0/English_pattern_9_of_spades.svg
+
+H10: https://upload.wikimedia.org/wikipedia/commons/b/bb/English_pattern_10_of_hearts.svg
+S10: https://upload.wikimedia.org/wikipedia/commons/d/da/English_pattern_10_of_spades.svg
+
+HJ: https://upload.wikimedia.org/wikipedia/commons/5/56/English_pattern_jack_of_hearts.svg
+SJ: https://upload.wikimedia.org/wikipedia/commons/4/4f/English_pattern_jack_of_spades.svg
+
+HQ: https://upload.wikimedia.org/wikipedia/commons/9/9d/English_pattern_queen_of_hearts.svg
+SQ: https://upload.wikimedia.org/wikipedia/commons/c/ca/English_pattern_queen_of_spades.svg
+
+HK: https://upload.wikimedia.org/wikipedia/commons/1/14/English_pattern_king_of_hearts.svg
+SK: https://upload.wikimedia.org/wikipedia/commons/f/f1/English_pattern_king_of_spades.svg
