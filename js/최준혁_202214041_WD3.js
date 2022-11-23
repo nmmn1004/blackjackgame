@@ -1,3 +1,6 @@
+localStorage.setItem("chips", 50000);
+
+
 // 칩
 let chip = {
   balance : 50000,
@@ -495,6 +498,7 @@ function bettingSoundPlay() {
 function backgroundMusicPlay() {
   var music = new Audio('/src/sound/backgroundMusic.mp3');
   music.currentTime = 0;
+  music.muted = false;
   music.play();
   music.volume = 0.3;
   music.autoplay(true);
