@@ -121,6 +121,12 @@ a {
   color: white;
   font-size: 5vh;
   -webkit-text-stroke: 0.7vh white;
+
+  transition-duration: 0.1s;
+}
+.backButton:hover {
+  color: rgb(230, 230, 230);
+  -webkit-text-stroke: 0.7vh rgb(230, 230, 230);
 }
 
 /* 게임 관련 버튼 */
@@ -141,14 +147,28 @@ nav form button {
 }
 .betButton {
   background-color: lightgreen;
+
+  transition-duration: 0.3s;
 }
 .hitButton {
   background-color: lightcoral;
+
+  transition-duration: 0.3s;
 }
 .standButton {
   background-color: lightcyan;
-}
 
+  transition-duration: 0.3s;
+}
+.betButton:active {
+  background-color: white;
+}
+.hitButton:active {
+  background-color: white;
+}
+.standButton:active {
+  background-color: white;
+}
 
 /* Score 표시 테이블 */
 .game aside {
@@ -257,19 +277,19 @@ nav form button {
 }
 
 @keyframes chip {
-  0% {top: -500%;}
+  0% {top: -100%;}
 
   100% {top: 30%;}
 }
 @keyframes chip2 {
-  0% {top: -522%;}
+  0% {top: -122%;}
 
   100% {top: 52;}
 }
 @keyframes chip3 {
   0% {top: 30%;}
 
-  100% {top: -500%;;}
+  100% {top: -100%;;}
 }
 .chipImg {
   position: absolute;
@@ -341,6 +361,11 @@ nav form button {
   -webkit-text-stroke: 0.2vh black;
   background-color: gray;
   padding: 3px 10px;
+
+  transition-duration: 0.5s;
+}
+.cardImgShop button:hover, .resetButton:hover, .resetButton2:hover {
+  background-color: white;
 }
 .price0 {
   text-decoration: none;
@@ -371,6 +396,8 @@ nav form button {
   position: absolute;
   right: 5%;
   top: 5%;
+
+  transition-duration: 0.5s;
 }
 .resetButton2 {
   text-decoration: none;
@@ -381,6 +408,8 @@ nav form button {
   -webkit-text-stroke: 0.2vh black;
   background-color: gray;
   padding: 3px 10px;
+
+  transition-duration: 0.5s;
 }
 
 
