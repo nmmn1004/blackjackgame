@@ -22,9 +22,18 @@ let chip = {
     localStorage.setItem("ownChip", 50000);
     alert("초기화되었습니다.");
   },
-  bettingReset : function(){
+  bettingReset : function() {
     document.getElementById("bettingNumber").innerHTML = 0;
     this.bettingChips = 0;
+  },
+  setting : function() {
+    if (localStorage.getItem("first") == "1"){
+    }
+    else {
+      localStorage.setItem("first", 1);
+      localStorage.setItem("ownChip", 50000);
+    }
+    console.log(localStorage.getItem("first") + "칩 세팅");
   }
 }
 // 딜레이 시간
