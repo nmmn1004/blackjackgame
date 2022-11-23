@@ -308,9 +308,9 @@ nav form button {
   100% {top: 30%;}
 }
 @keyframes chip2 {
-  0% {top: -122%;}
+  0% {top: -78%;}
 
-  100% {top: 52;}
+  100% {top: 52%;}
 }
 @keyframes chip3 {
   0% {top: 30%;}
@@ -340,7 +340,7 @@ nav form button {
 }
 .chipImg3 {
   position: absolute;
-  top: 30%;
+  top: -100%;
   left: -40%;
   width: 35%;
   
