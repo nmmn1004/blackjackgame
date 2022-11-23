@@ -24,12 +24,18 @@
       <td><img class="backCard" src="./src/img/cardBackImg_2.svg"></td>
       <td><img class="backCard" src="./src/img/cardBackImg_3.png"></td>
       <td><img class="backCard" src="./src/img/cardBackImg_4.png"></td></tr>
-    <tr><td><button>구매</button><button>적용</button></td>
-      <td><button>구매</button><button>적용</button></td>
-      <td><button>구매</button><button>적용</button></td>
-      <td><button>구매</button><button>적용</button></td>
-      <td><button>구매</button><button>적용</button></td></tr>
+    <tr><td class="prise0">기본</td>
+      <td class="prise">60.0k</td>
+      <td class="prise">60.0k</td>
+      <td class="prise">120.0k</td>
+      <td class="prise">150.k</td></tr>
+    <tr><td><button onclick="buyBackImg(0);">구매</button><button onclick="apply(0);">적용</button></td>
+      <td><button onclick="buyBackImg(1);">구매</button><button onclick="apply(1);">적용</button></td>
+      <td><button onclick="buyBackImg(2);">구매</button><button onclick="apply(2);">적용</button></td>
+      <td><button onclick="buyBackImg(3);">구매</button><button onclick="apply(3);">적용</button></td>
+      <td><button onclick="buyBackImg(4);">구매</button><button onclick="apply(4);">적용</button></td></tr>
   </tbody>
+  <button class="resetButton" onclick="cardReset()">초기화</button>
 </table>
   <footer>
     <div class="chipsArea">

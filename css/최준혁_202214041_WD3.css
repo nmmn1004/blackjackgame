@@ -326,3 +326,33 @@ nav form button {
   background-color: gray;
   padding: 3px 10px;
 }
+.prise0 {
+  text-decoration: none;
+  color: white;
+  font-size: 4vh;
+  font-weight: 600;
+  margin: 5px;
+  -webkit-text-stroke: 0.2vh black;
+}
+.prise {
+  text-decoration: none;
+  color: white;
+  font-size: 4vh;
+  font-weight: 600;
+  margin: 5px;
+  -webkit-text-stroke: 0.2vh gold;
+}
+
+.resetButton {
+  text-decoration: none;
+  color: white;
+  font-size: 4vh;
+  font-weight: 600;
+  margin: 5px;
+  -webkit-text-stroke: 0.2vh black;
+  background-color: gray;
+  padding: 3px 10px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}

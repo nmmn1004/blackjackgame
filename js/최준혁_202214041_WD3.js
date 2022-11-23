@@ -51,6 +51,7 @@ let card = ["H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H10", "HJ", "
   "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "SJ", "SQ", "SK"];
 // 
 window.onload = function() {
+  // setting();
   // clickSoundPlay();
   // backgroundMusicPlay();
 }
@@ -216,7 +217,11 @@ function firstDraw(who) {
   who.score = 0;
 
   let dealerCard = dealer.place();
-  dealerCard.innerHTML = '<img class="firstCard" src="./src/img/cardBackImg_0.png">';
+
+  let img = document.createElement('img');
+  img.className = "card";
+  img.src = backImgLoad();
+  dealerCard.appendChild(img);
 
   console.log(who.firstCard + ', ' + who.firstScore);
 
@@ -250,18 +255,22 @@ function gameReset() {
 }
 
 function setting() {
-  // let img = getItem("backImg", )
-
-  let dealerCard = dealer.place();
-  dealerCard.innerHTML = '<img class="card" src="./src/img/cardBackImg_0.png"><img class="card" src="./src/img/cardBackImg_0.png">';
-
-  let playerCard = player.place();
-  playerCard.innerHTML = '<img class="card" src="./src/img/cardBackImg_0.png"><img class="card" src="./src/img/cardBackImg_0.png">';
-  
-
-  // playerCard.appendChild
+  for (let i = 0; i < 2; i++) {
+    addBackCard(dealer);
+  }
+  for (let i = 0; i < 2; i++) {
+    addBackCard(player);
+  }
 }
+function addBackCard(who) {
+  let place = who.place();
 
+  let backImg = document.createElement('img');
+  backImg.className = "card";
+  backImg.src = backImgLoad();
+
+  place.appendChild(backImg);
+}
 // 카드를 추가하여 딜러의 area에 놓음
 function addCards(who) {
   var cardImg = document.createElement('img');
@@ -508,6 +517,26 @@ function bettingSoundPlay() {
   clickSound.play();
 }
 
+function backImgLoad() {
+  if (localStorage.getItem('backImg') == "0") {
+    return "./src/img/cardBackImg_0.png";
+  }
+  else if(localStorage.getItem('backImg') == "1"){
+    return "./src/img/cardBackImg_1.svg";
+  }
+  else if(localStorage.getItem('backImg') == "2"){
+    return "./src/img/cardBackImg_2.svg";
+  }
+  else if(localStorage.getItem('backImg') == "3"){
+    return "./src/img/cardBackImg_3.png";
+  }
+  else if(localStorage.getItem('backImg') == "4"){
+    return "./src/img/cardBackImg_4.png";
+  }
+  else {
+    return "./src/img/cardBackImg_0.png";
+  }
+}
 // function backgroundMusicPlay() {
 //   var music = new Audio('/src/sound/backgroundMusic.mp3');
 //   music.currentTime = 0;
@@ -517,3 +546,152 @@ function bettingSoundPlay() {
 //   music.volume = 0.3;
 //   music.controls(true);
 // }
+
+
+// 커스터마이징
+function buyBackImg(card) {
+ let select = confirm("구매하시겠습니까?");
+
+ if (select) {
+  if (card == 1) {
+    if (parseFloat(localStorage.getItem("ownChip")) >= 10000){
+      if (localStorage.getItem("card1") == "1"){
+        alert('이미 구매한 카드입니다.');
+      }
+      else {
+        localStorage.setItem("card1", 1);
+        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 10000 );
+        chip.refresh();
+        alert('구매 완료되었습니다.');
+      }
+    }
+    else {
+      alert('금액이 부족합니다.');
+    }
+  }
+  else if (card == 2) {
+    if (parseFloat(localStorage.getItem("ownChip")) >= 10000){
+      if (localStorage.getItem("card2") == "1"){
+        alert('이미 구매한 카드입니다.');
+      }
+      else {
+        localStorage.setItem("card2", 1);
+        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 10000 );
+        chip.refresh();
+        alert('구매 완료되었습니다.');
+      }
+    }
+    else {
+      alert('금액이 부족합니다.');
+    }
+  }
+  else if (card == 3) {
+    if (parseFloat(localStorage.getItem("ownChip")) >= 10000){
+      if (localStorage.getItem("card3") == "1"){
+        alert('이미 구매한 카드입니다.');
+      }
+      else {
+        localStorage.setItem("card3", 1);
+        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 10000 );
+        chip.refresh();
+        alert('구매 완료되었습니다.');
+      }
+    }
+    else {
+      alert('금액이 부족합니다.');
+    }
+  }
+  else if (card == 4) {
+    if (parseFloat(localStorage.getItem("ownChip")) >= 10000){
+      if (localStorage.getItem("card4") == "1"){
+        alert('이미 구매한 카드입니다.');
+      }
+      else {
+        localStorage.setItem("card4", 1);
+        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 10000 );
+        chip.refresh();
+        alert('구매 완료되었습니다.');
+      }
+    }
+    else {
+      alert('금액이 부족합니다.');
+    }
+  }
+  else {
+    alert('이미 구매한 카드입니다.')
+  }
+
+ }
+}
+
+function apply(card) {
+  if (card == 1) {
+    if (localStorage.getItem("card1") == "1") {
+      if(localStorage.getItem("backImg") == "1") {
+        alert("이미 적용된 카드입니다.");
+      }
+      else {
+        localStorage.setItem("backImg", "1");
+        alert("카드 뒷면이 바뀌었습니다.");
+      }
+    }
+    else {
+      alert("구매하지 않은 카드입니다.");
+    }
+  }
+  else if (card == 2) {
+    if (localStorage.getItem("card2") == "1") {
+      if(localStorage.getItem("backImg") == "2") {
+        alert("이미 적용된 카드입니다.");
+      }
+      else {
+        localStorage.setItem("backImg", "2");
+        alert("카드 뒷면이 바뀌었습니다.");
+      }
+    }
+    else {
+      alert("구매하지 않은 카드입니다.");
+    }
+  }
+  else if (card == 3) {
+    if (localStorage.getItem("card3") == "1") {
+      if(localStorage.getItem("backImg") == "3") {
+        alert("이미 적용된 카드입니다.");
+      }
+      else {
+        localStorage.setItem("backImg", "3");
+        alert("카드 뒷면이 바뀌었습니다.");
+      }
+    }
+    else {
+      alert("구매하지 않은 카드입니다.");
+    }
+  }
+  else if (card == 4) {
+    if (localStorage.getItem("card4") == "1") {
+      if(localStorage.getItem("backImg") == "4") {
+        alert("이미 적용된 카드입니다.");
+      }
+      else {
+        localStorage.setItem("backImg", "4");
+        alert("카드 뒷면이 바뀌었습니다.");
+      }
+    }
+    else {
+      alert("구매하지 않은 카드입니다.");
+    }
+  }
+  else {
+    if(localStorage.getItem("backImg") == "0") {
+      alert("이미 적용된 카드입니다.");
+    }
+    else {
+      localStorage.setItem("backImg", "0");
+      alert("카드 뒷면이 바뀌었습니다.");
+    }
+  }
+}
+
+function cardReset() {
+  localStorage.setItem("card1", 0, "card3", 0, "card4", 0, "card5", 0, "backImg", 0);
+}
