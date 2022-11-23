@@ -32,8 +32,9 @@ let chip = {
     else {
       localStorage.setItem("first", 1);
       localStorage.setItem("ownChip", 50000);
+      console.log("칩 세팅 완료");
     }
-    console.log(localStorage.getItem("first") + "칩 세팅");
+    console.log(localStorage.getItem("first") + " : first");
   }
 }
 // 딜레이 시간
