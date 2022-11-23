@@ -2,7 +2,7 @@ body {
   background-color: #2D5C30;
 }
 .mainPage {
-  background-image: url('/src/img/backgroundImg.jpg');
+  background-image: url('backgroundImg.jpg');
 }
 
 /* 메인페이지 */
