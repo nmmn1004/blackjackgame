@@ -10,7 +10,20 @@
   <script>
     window.onload = function() {
       clickSoundPlay();
-      chip.refresh();
+      chip.refresh();   
+
+      const resetCardButton = document.getElementById('resetCardButton');
+
+      resetCardButton.addEventListener("click", cardReset);
+
+      function cardReset(e) {
+        localStorage.setItem("card1", 0);
+        localStorage.setItem("card2", 0);
+        localStorage.setItem("card3", 0);
+        localStorage.setItem("card4", 0);
+        localStorage.setItem("backImg", 0);
+        alert("초기화 되었습니다.");
+      } 
     }
   </script>
   <a class="backButton" href="index.html">&lt;</a>
@@ -35,9 +48,9 @@
       <td><button onclick="buyBackImg(3);">구매</button><button onclick="apply(3);">적용</button></td>
       <td><button onclick="buyBackImg(4);">구매</button><button onclick="apply(4);">적용</button></td></tr>
   </tbody>
-  <button class="resetButton" onclick="cardReset()">초기화</button>
+  <button class="resetButton" id="resetCardButton">초기화</button>
   <aside>
-    <audio src="src/sound/BGM_customizing .mp3" autoplay loop voluem onloadstart="this.volume = 0.2; this.play();"></audio>
+    <audio id="audioPlayer" src="src/sound/BGM_customizing .mp3" autoplay loop voluem onloadstart="this.volume = 0.2; this.play();"></audio>
   </aside>
 </table>
   <footer>

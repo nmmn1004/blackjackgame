@@ -1,3 +1,8 @@
+// 시작 시 사운드 출력
+window.onload = function() {
+  clickSoundPlay();
+}
+
 function bettingResult() {
   document.getElementById('bettingChipsResult').innerHTML = ( parseFloat(localStorage.getItem("bettingChips")) / 1000).toFixed(1) + "k";
 }
@@ -60,12 +65,6 @@ let player = {
 // 덱 카드 배열
 let card = ["H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H10", "HJ", "HQ", "HK", 
   "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "SJ", "SQ", "SK"];
-// 
-window.onload = function() {
-  // setting();
-  // clickSoundPlay();
-  // backgroundMusicPlay();
-}
 // bet 버튼을 누를 시 배팅 시작
 function betting() {
   console.log('betting 함수 실행');
@@ -703,11 +702,17 @@ function apply(card) {
   }
 }
 
-function cardReset() {
-  localStorage.setItem("card1", 0);
-  localStorage.setItem("card2", 0);
-  localStorage.setItem("card3", 0);
-  localStorage.setItem("card4", 0);
-  localStorage.setItem("backImg", 0);
-  alert("초기화 되었습니다.");
-}
+
+
+// 볼륨조절 실패작
+// const audio = document.getElementById('audioPlayer');
+// const audioVolume = document.getElementById('volume');
+
+// audioVolume.addEventListener("change", function(e) {
+//   localStorage.setItem("volume", (this.value / 10));
+//   audio.volume = parseFloat(localStorage.getItem("volume"));
+// })
+
+// function volumeControl() {
+//   audio.volume = parseFloat(localStorage.getItem("volume"));
+// }

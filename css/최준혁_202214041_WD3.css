@@ -92,7 +92,28 @@ a {
 }
 
 
-
+/* 볼륨 조절 */
+.voluemControls {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.574);
+  padding: 0 2vw;
+  border: 1px solid white;
+  border-radius: 0.5vw;
+}
+.controlsText {
+  padding: 2vh 0;
+  margin: 0;
+  font-size: 3vh;
+  font-weight: bold;
+  -webkit-text-stroke: 0.2vh black;
+  color: white;
+}
+#volume {
+  width: 10vw;
+}
 
 /* 게임 가운데 프린팅 */
 .blackJack {
