@@ -6,11 +6,11 @@
   <script type="text/javascript" src="./js/최준혁_202214041_WD3.js"></script>
   <title>blackJackGamePage</title>
 </head>
-<body>
+<body class="game">
   <script>
     window.onload = function() {
       clickSoundPlay();
-      // backgroundMusicPlay();
+      chip.refresh();
     }
   </script>
   <a class="backButton" href="index.html">&lt;</a>
@@ -63,7 +63,7 @@
     </div>
     <div class="chipsArea">
       <p class="chips">Chips</p>
-      <p id="chipsNumber">50.0k</p>
+      <p id="chipsNumber"></p>
     </div>
   </footer>
 </body>

@@ -10,18 +10,31 @@
   <script>
     window.onload = function() {
       clickSoundPlay();
-      // backgroundMusicPlay();
+      chip.refresh();
     }
   </script>
   <a class="backButton" href="index.html">&lt;</a>
   <header>
     커스터마이징
   </header>
-
+<table class="cardImgShop">
+  <tbody>
+    <tr><td><img class="backCard" src="./src/img/cardBackImg_0.png"></td>
+      <td><img class="backCard" src="./src/img/cardBackImg_1.svg"></td>
+      <td><img class="backCard" src="./src/img/cardBackImg_2.svg"></td>
+      <td><img class="backCard" src="./src/img/cardBackImg_3.png"></td>
+      <td><img class="backCard" src="./src/img/cardBackImg_4.png"></td></tr>
+    <tr><td><button>구매</button><button>적용</button></td>
+      <td><button>구매</button><button>적용</button></td>
+      <td><button>구매</button><button>적용</button></td>
+      <td><button>구매</button><button>적용</button></td>
+      <td><button>구매</button><button>적용</button></td></tr>
+  </tbody>
+</table>
   <footer>
     <div class="chipsArea">
       <p class="chips">Chips</p>
-      <p id="chipsNumber" ></p>
+      <p id="chipsNumber"></p>
     </div>
   </footer>
 </body>

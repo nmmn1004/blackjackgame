@@ -1,5 +1,3 @@
-// localStorage.setItem("bettingChips", 3000);
-
 function bettingResult() {
   document.getElementById('bettingChipsResult').innerHTML = localStorage.getItem("bettingChips");
 }
@@ -13,15 +11,15 @@ let chip = {
   balance : 50000,
   bettingChips : 0,
   refresh : function() { 
-    document.getElementById("chipsNumber").innerHTML = ( this.balance / 1000).toFixed(1) + "k";
+    document.getElementById("chipsNumber").innerHTML = ( parseFloat(localStorage.getItem("ownChip")) / 1000).toFixed(1) + "k";
   },
   betting : function(bet) {
     document.getElementById("bettingNumber").innerHTML = bet;
     localStorage.setItem("bettingChips", bet);
-    this.balance -= bet;
+    localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - bet);
   },
   reset : function() { 
-    this.balance = 50000; 
+    localStorage.setItem("ownChip", 50000);
   },
   bettingReset : function(){
     document.getElementById("bettingNumber").innerHTML = 0;
@@ -98,6 +96,7 @@ function betting() {
     }
     console.log(dealer.score + dealer.firstScore + ' : 딜러의 현재 점수');
     // 위의 행위를 dealer - player - dealer - player 순으로 반복
+    console.log(localStorage.getItem("ownChip") + "현재 소유한 chip");
   }
 }
 // hit 버튼을 누를 시 실행
@@ -178,7 +177,7 @@ function win() {
 
   var win = window.open('./최준혁_202214041_WD3-win.html', 'U R WIN', 'width=1200, height=700');
 
-  chip.balance += chip.bettingChips * 2;
+  localStorage.setItem("ownChip", (parseFloat(localStorage.getItem("ownChip")) + chip.bettingChips * 2));
   chip.bettingReset();
   gameReset();
   setting();
@@ -191,7 +190,7 @@ function push() {
 
   var push = window.open('./최준혁_202214041_WD3-push.html', 'U R PUSH', 'width=1200, height=700');
 
-  chip.balance += chip.bettingChips;
+  localStorage.setItem("ownChip", (parseFloat(localStorage.getItem("ownChip")) + chip.bettingChips));
   chip.bettingReset();
   gameReset();
   setting();
@@ -251,7 +250,7 @@ function gameReset() {
 }
 
 function setting() {
-  let img = getItem("backImg", )
+  // let img = getItem("backImg", )
 
   let dealerCard = dealer.place();
   dealerCard.innerHTML = '<img class="card" src="./src/img/cardBackImg_0.png"><img class="card" src="./src/img/cardBackImg_0.png">';
@@ -260,7 +259,7 @@ function setting() {
   playerCard.innerHTML = '<img class="card" src="./src/img/cardBackImg_0.png"><img class="card" src="./src/img/cardBackImg_0.png">';
   
 
-  playerCard.appendChild
+  // playerCard.appendChild
 }
 
 // 카드를 추가하여 딜러의 area에 놓음

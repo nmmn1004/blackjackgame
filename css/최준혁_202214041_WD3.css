@@ -151,20 +151,20 @@ nav form button {
 
 
 /* Score 표시 테이블 */
-aside {
+.game aside {
   display: inline-block;
   position: absolute;
   right: 1%;
   top: 2%;
 }
-th {
+.game th {
   border: 2px solid black;
   font-size: 3vh;
   padding: 1vh 3vh 1vh 3vh;
   text-align: center;
   background-color: darkseagreen;
 }
-td {
+.game td {
   border: 2px solid black;
   font-size: 3vh;
   padding: 2vh 3vh 2vh 3vh;
@@ -302,4 +302,27 @@ td {
   font-weight: bold;
   color: gold;
   /* -webkit-text-stroke: 0.2vh black; */
+}
+
+.backCard {
+  height: 35vh;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 1.1em;
+}
+.cardImgShop {
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+.cardImgShop button {
+  text-decoration: none;
+  color: white;
+  font-size: 4vh;
+  font-weight: 600;
+  margin: 5px;
+  -webkit-text-stroke: 0.2vh black;
+  background-color: gray;
+  padding: 3px 10px;
 }
