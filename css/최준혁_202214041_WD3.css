@@ -266,6 +266,11 @@ nav form button {
 
   100% {top: 52;}
 }
+@keyframes chip3 {
+  0% {top: 30%;}
+
+  100% {top: -500%;;}
+}
 .chipImg {
   position: absolute;
   top: 30%;
@@ -273,7 +278,7 @@ nav form button {
   width: 35%;
   
   animation-name: chip;
-  animation-duration: 1s;
+  animation-duration: 6s;
   animation-iteration-count: 1;
 }
 
@@ -284,9 +289,20 @@ nav form button {
   width: 35%;
 
   animation-name: chip2;
-  animation-duration: 1s;
+  animation-duration: 6s;
   animation-iteration-count: 1;
 }
+.chipImg3 {
+  position: absolute;
+  top: 30%;
+  left: -40%;
+  width: 35%;
+  
+  animation-name: chip3;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+}
+
 
 .resultChips{
   display: block;
@@ -326,7 +342,7 @@ nav form button {
   background-color: gray;
   padding: 3px 10px;
 }
-.prise0 {
+.price0 {
   text-decoration: none;
   color: white;
   font-size: 4vh;
@@ -334,7 +350,7 @@ nav form button {
   margin: 5px;
   -webkit-text-stroke: 0.2vh black;
 }
-.prise {
+.price {
   text-decoration: none;
   color: white;
   font-size: 4vh;

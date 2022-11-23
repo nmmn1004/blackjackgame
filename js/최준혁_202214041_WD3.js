@@ -1,8 +1,8 @@
 function bettingResult() {
-  document.getElementById('bettingChipsResult').innerHTML = localStorage.getItem("bettingChips");
+  document.getElementById('bettingChipsResult').innerHTML = ( parseFloat(localStorage.getItem("bettingChips")) / 1000).toFixed(1) + "k";
 }
 function bettingResultWin() {
-  document.getElementById('bettingChipsResult').innerHTML = parseInt(localStorage.getItem("bettingChips")) * 2;
+  document.getElementById('bettingChipsResult').innerHTML = ( (parseFloat(localStorage.getItem("bettingChips")) / 1000)*2).toFixed(1) + "k";
 }
 
 
@@ -77,8 +77,8 @@ function betting() {
   if (bet < 1000 || isNaN(bet)) {
     alert('숫자가 아니거나 1,000 미만인 금액은 입력하실 수 없습니다.');
   }
-  else if( bet > parseInt(localStorage.getItem("bettingChips")) ) {
-    alert('보유한 금액보다 큰 금액을 입력할 수 없습니다. \n현재 보유 금액 ' + chip.balance);
+  else if( bet > parseInt(localStorage.getItem("ownChip")) ) {
+    alert('보유한 금액보다 큰 금액을 입력할 수 없습니다. \n현재 보유 금액 ' + parseInt(localStorage.getItem("ownChip")));
   }
   else {
     // 정상 작동 시 게임 시작
