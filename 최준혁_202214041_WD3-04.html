@@ -10,7 +10,7 @@
   <script>
     window.onload = function() {
       clickSoundPlay();
-      backgroundMusicPlay();
+      // backgroundMusicPlay();
     }
   </script>
   <a class="backButton" href="index.html">&lt;</a>
@@ -31,5 +31,8 @@
       &nbsp;높은 기록을 향해서 게임을 해보세요!
     </article>
   </section>
+  <aside>
+    <audio src="src\sound\backgroundMusic.mp3" autoplay loop voluem onloadstart="this.volume = 0.3;"></audio>
+  </aside>
 </body>
 </html>

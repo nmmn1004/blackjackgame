@@ -10,7 +10,7 @@
   <script>
     window.onload = function() {
       clickSoundPlay();
-      backgroundMusicPlay();
+      // backgroundMusicPlay();
     }
   </script>
   <a class="backButton" href="index.html">&lt;</a>
@@ -35,5 +35,8 @@
       더니, 지금까지도 그 자리를 여전히 지키고 있다.
     </article>
   </section>
+  <aside>
+    <audio src="src\sound\backgroundMusic.mp3" autoplay loop voluem onloadstart="this.volume = 0.3;"></audio>
+  </aside>
 </body>
 </html>

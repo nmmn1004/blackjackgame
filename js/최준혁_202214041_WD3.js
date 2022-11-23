@@ -495,11 +495,13 @@ function bettingSoundPlay() {
   clickSound.currentTime = 0;
   clickSound.play();
 }
-function backgroundMusicPlay() {
-  var music = new Audio('/src/sound/backgroundMusic.mp3');
-  music.currentTime = 0;
-  music.muted = false;
-  music.play();
-  music.volume = 0.3;
-  music.autoplay(true);
-}
+
+// function backgroundMusicPlay() {
+//   var music = new Audio('/src/sound/backgroundMusic.mp3');
+//   music.currentTime = 0;
+//   music.autoplay(true);
+//   music.muted = false;
+//   music.play();
+//   music.volume = 0.3;
+//   music.controls(true);
+// }

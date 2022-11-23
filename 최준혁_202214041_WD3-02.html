@@ -10,7 +10,7 @@
   <script>
     window.onload = function() {
       clickSoundPlay();
-      backgroundMusicPlay();
+      // backgroundMusicPlay();
     }
   </script>
   <a class="backButton" href="index.html">&lt;</a>
@@ -31,6 +31,7 @@
         <tr><td id="dealerScore">0</td><td id="playerScore">0</td></tr>
       </tbody>
     </table>
+    <audio src="src\sound\backgroundMusic.mp3" autoplay loop voluem onloadstart="this.volume = 0.3;"></audio>
   </aside>
 
   <div class="dealerArea">
