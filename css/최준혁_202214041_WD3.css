@@ -356,3 +356,13 @@ nav form button {
   right: 5%;
   top: 5%;
 }
+.resetButton2 {
+  text-decoration: none;
+  color: white;
+  font-size: 4vh;
+  font-weight: 600;
+  margin: 5px;
+  -webkit-text-stroke: 0.2vh black;
+  background-color: gray;
+  padding: 3px 10px;
+}

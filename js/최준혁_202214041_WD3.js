@@ -20,6 +20,7 @@ let chip = {
   },
   reset : function() { 
     localStorage.setItem("ownChip", 50000);
+    alert("초기화되었습니다.");
   },
   bettingReset : function(){
     document.getElementById("bettingNumber").innerHTML = 0;
@@ -693,5 +694,10 @@ function apply(card) {
 }
 
 function cardReset() {
-  localStorage.setItem("card1", 0, "card3", 0, "card4", 0, "card5", 0, "backImg", 0);
+  localStorage.setItem("card1", 0);
+  localStorage.setItem("card2", 0);
+  localStorage.setItem("card3", 0);
+  localStorage.setItem("card4", 0);
+  localStorage.setItem("backImg", 0);
+  alert("초기화 되었습니다.");
 }
