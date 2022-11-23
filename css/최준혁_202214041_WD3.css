@@ -3,6 +3,8 @@ body {
 }
 .mainPage {
   background-image: url('backgroundImg.jpg');
+  background-repeat : no-repeat;
+  background-size : cover;
 }
 
 /* 메인페이지 */
