@@ -551,7 +551,7 @@ function backImgLoad() {
 function backgroundMusicPlay() {
   var music = new Audio('/src/sound/backgroundMusic.mp3');
   music.currentTime = 0;
-  music.autoplay(true);
+  music.loop();
   music.muted = false;
   music.play();
   music.volume = 0.3;
