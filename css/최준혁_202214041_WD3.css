@@ -3,6 +3,8 @@ body {
 }
 .mainPage {
   background-image: url('backgroundImg.jpg');
+  margin: 0;
+  height: 100vh;
   background-repeat : no-repeat;
   background-size : cover;
 }
@@ -77,14 +79,14 @@ a {
 /* 카드 속성 */
 .dealerCards, .playerCards {
   text-align: center;
-  padding-left: 10em;
+  padding-left: 5vw;
 }
 
 
 
 .card, .dealerBackCard, .firstCard {
   height: 35vh;
-  margin: 0 0 0 -20vh;
+  margin: 0 0 0 -10vh;
   border: 2px solid black;
   border-radius: 1.1em;
 }
