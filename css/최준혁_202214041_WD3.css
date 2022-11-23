@@ -382,3 +382,9 @@ nav form button {
   background-color: gray;
   padding: 3px 10px;
 }
+
+
+.controls {
+  position: absolute;
+  top: -300%;
+}

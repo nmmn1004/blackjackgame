@@ -548,15 +548,15 @@ function backImgLoad() {
     return "./src/img/cardBackImg_0.png";
   }
 }
-function backgroundMusicPlay() {
-  var music = new Audio('/src/sound/backgroundMusic.mp3');
-  music.currentTime = 0;
-  music.loop();
-  music.muted = false;
-  music.play();
-  music.volume = 0.3;
-  music.controls(true);
-}
+// function backgroundMusicPlay() {
+//   var music = new Audio('/src/sound/backgroundMusic.mp3');
+//   music.currentTime = 0;
+//   music.loop();
+//   music.muted = false;
+//   music.play();
+//   music.volume = 0.3;
+//   music.controls(true);
+// }
 
 
 // 커스터마이징
