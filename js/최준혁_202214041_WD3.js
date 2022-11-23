@@ -77,7 +77,7 @@ function betting() {
   if (bet < 1000 || isNaN(bet)) {
     alert('숫자가 아니거나 1,000 미만인 금액은 입력하실 수 없습니다.');
   }
-  else if( bet > chip.balance ) {
+  else if( bet > parseInt(localStorage.getItem("bettingChips")) ) {
     alert('보유한 금액보다 큰 금액을 입력할 수 없습니다. \n현재 보유 금액 ' + chip.balance);
   }
   else {
