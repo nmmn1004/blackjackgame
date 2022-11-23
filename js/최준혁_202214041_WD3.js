@@ -13,7 +13,7 @@ let chip = {
   balance : 50000,
   bettingChips : 0,
   refresh : function() { 
-    document.getElementById("chipsNumber").innerHTML = (this.balance / 1000).toFixed(1) + "k";
+    document.getElementById("chipsNumber").innerHTML = ( this.balance / 1000).toFixed(1) + "k";
   },
   betting : function(bet) {
     document.getElementById("bettingNumber").innerHTML = bet;
@@ -251,11 +251,16 @@ function gameReset() {
 }
 
 function setting() {
+  let img = getItem("backImg", )
+
   let dealerCard = dealer.place();
   dealerCard.innerHTML = '<img class="card" src="./src/img/cardBackImg_0.png"><img class="card" src="./src/img/cardBackImg_0.png">';
 
   let playerCard = player.place();
   playerCard.innerHTML = '<img class="card" src="./src/img/cardBackImg_0.png"><img class="card" src="./src/img/cardBackImg_0.png">';
+  
+
+  playerCard.appendChild
 }
 
 // 카드를 추가하여 딜러의 area에 놓음

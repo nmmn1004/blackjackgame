@@ -52,6 +52,17 @@ a {
   font-weight: bolder;
   -webkit-text-stroke: 0.2vh black;
 }
+.custermizing header {
+  width: auto;
+  display: inline-block;
+  font-size: 8vh;
+  position: absolute;
+  padding-top: 5px;
+  left: 35vw;
+  color: white;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.2vh black;
+}
 .history section article, .help section article {
   font-size: 5vh;
   position: absolute;
