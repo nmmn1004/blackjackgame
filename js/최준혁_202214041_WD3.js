@@ -1,4 +1,11 @@
-localStorage.setItem("chips", 50000);
+// localStorage.setItem("bettingChips", 3000);
+
+function bettingResult() {
+  document.getElementById('bettingChipsResult').innerHTML = localStorage.getItem("bettingChips");
+}
+function bettingResultWin() {
+  document.getElementById('bettingChipsResult').innerHTML = parseInt(localStorage.getItem("bettingChips")) * 2;
+}
 
 
 // 칩
@@ -10,6 +17,7 @@ let chip = {
   },
   betting : function(bet) {
     document.getElementById("bettingNumber").innerHTML = bet;
+    localStorage.setItem("bettingChips", bet);
     this.balance -= bet;
   },
   reset : function() { 
@@ -156,7 +164,7 @@ function burst() {
   console.log('플레이어 패배');
   alert('플레이어 ' + player.score + '점, 딜러 ' + (dealer.score + dealer.firstScore) + '점으로 플레이어가 패배합니다.');
 
-  var burst = window.open('/최준혁_202214041_WD3-burst.html', 'U R burst', 'width=1200, height=700');
+  var burst = window.open('./최준혁_202214041_WD3-burst.html', 'U R burst', 'width=1200, height=700');
 
   chip.bettingReset();
   gameReset();
@@ -168,7 +176,7 @@ function win() {
   console.log('플레이어 승리');
   alert('플레이어 ' + player.score + '점, 딜러 ' + (dealer.score + dealer.firstScore) + '점으로 플레이어가 승리합니다.');
 
-  var win = window.open('/최준혁_202214041_WD3-win.html', 'U R WIN', 'width=1200, height=700');
+  var win = window.open('./최준혁_202214041_WD3-win.html', 'U R WIN', 'width=1200, height=700');
 
   chip.balance += chip.bettingChips * 2;
   chip.bettingReset();
@@ -181,7 +189,7 @@ function push() {
   console.log('무승부');
   alert('플레이어 ' + player.score + '점, 딜러 ' + (dealer.score + dealer.firstScore) + '점으로 무승부됩니다.');
 
-  var push = window.open('/최준혁_202214041_WD3-push.html', 'U R PUSH', 'width=1200, height=700');
+  var push = window.open('./최준혁_202214041_WD3-push.html', 'U R PUSH', 'width=1200, height=700');
 
   chip.balance += chip.bettingChips;
   chip.bettingReset();
@@ -209,7 +217,7 @@ function firstDraw(who) {
   who.score = 0;
 
   let dealerCard = dealer.place();
-  dealerCard.innerHTML = '<img class="firstCard" src="/src/img/cardBackImg_0.png">';
+  dealerCard.innerHTML = '<img class="firstCard" src="./src/img/cardBackImg_0.png">';
 
   console.log(who.firstCard + ', ' + who.firstScore);
 
@@ -244,10 +252,10 @@ function gameReset() {
 
 function setting() {
   let dealerCard = dealer.place();
-  dealerCard.innerHTML = '<img class="card" src="/src/img/cardBackImg_0.png"><img class="card" src="/src/img/cardBackImg_0.png">';
+  dealerCard.innerHTML = '<img class="card" src="./src/img/cardBackImg_0.png"><img class="card" src="./src/img/cardBackImg_0.png">';
 
   let playerCard = player.place();
-  playerCard.innerHTML = '<img class="card" src="/src/img/cardBackImg_0.png"><img class="card" src="/src/img/cardBackImg_0.png">';
+  playerCard.innerHTML = '<img class="card" src="./src/img/cardBackImg_0.png"><img class="card" src="./src/img/cardBackImg_0.png">';
 }
 
 // 카드를 추가하여 딜러의 area에 놓음
@@ -486,12 +494,12 @@ function cardCheck(card) {
 
 
 function clickSoundPlay() {
-  var clickSound = new Audio('/src/sound/clickSound.mp3');
+  var clickSound = new Audio('./src/sound/clickSound.mp3');
   clickSound.currentTime = 0;
   clickSound.play();
 }
 function bettingSoundPlay() {
-  var clickSound = new Audio('/src/sound/bettingSound.mp3');
+  var clickSound = new Audio('./src/sound/bettingSound.mp3');
   clickSound.currentTime = 0;
   clickSound.play();
 }

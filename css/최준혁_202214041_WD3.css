@@ -276,3 +276,19 @@ td {
   animation-duration: 1s;
   animation-iteration-count: 1;
 }
+
+.resultChips{
+  display: block;
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 0.2vh black;
+}
+#bettingChipsResult {
+  text-align: center;
+  font-size: 4vh;
+  font-weight: bold;
+  color: gold;
+  /* -webkit-text-stroke: 0.2vh black; */
+}
