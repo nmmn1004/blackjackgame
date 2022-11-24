@@ -20,7 +20,7 @@
     <p class="controlsText">배경음악 볼륨 조절</p><input type="range" id="volume" min="1" max="10" value="2">
   </form> -->
   <aside>
-    <audio src="./src/sound/backgroundMusic.mp3" autoplay loop onloadstart="this.volume = 0.2;"></audio>
+    <audio src="./src/sound/backgroundMusic.mp3" autoplay loop onloadstart="this.volume = 0.2; this.play();"></audio>
   </aside>
   <footer>
     made by 최준혁.
