@@ -171,6 +171,26 @@ nav form button {
   margin: 0.5em 0.5em 0.5em 0.1em;
   cursor: pointer;
 }
+bet {
+  color: lightgreen;
+}
+hit {
+  color: lightcoral;
+}
+stand {
+  color: lightcyan;
+}
+chips {
+  color: gold;
+}
+A {
+  font-size: 120%;
+  color: darkgray;
+}
+J, Q, K {
+  font-size: 120%;
+  color: rebeccapurple;
+}
 .betButton {
   background-color: lightgreen;
 
@@ -446,3 +466,4 @@ nav form button {
   position: absolute;
   top: -300%;
 }
+

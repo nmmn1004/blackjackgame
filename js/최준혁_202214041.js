@@ -519,9 +519,7 @@ function cardCheck(card) {
 function clickSoundPlay() {
   var clickSound = new Audio('./src/sound/clickSound.mp3');
   clickSound.currentTime = 0;
-  clickSound.muted = "true";
   clickSound.play();
-  clickSound.muted = "false";
 }
 function bettingSoundPlay() {
   var clickSound = new Audio('./src/sound/bettingSound.mp3');
