@@ -549,14 +549,14 @@ function backImgLoad() {
     return "./src/img/cardBackImg_0.png";
   }
 }
-function backgroundMusicPlay() {
-  var music = new Audio('src/sound/backgroundMusic.mp3');
-  music.currentTime = 0;
-  music.loop = true;
-  music.muted = false;
-  music.play();
-  music.volume = 0.2;
-}
+// function backgroundMusicPlay() {
+//   var music = new Audio('src/sound/backgroundMusic.mp3');
+//   music.currentTime = 0;
+//   music.loop = true;
+//   music.muted = false;
+//   music.play();
+//   music.volume = 0.2;
+// }
 
 
 // 커스터마이징
