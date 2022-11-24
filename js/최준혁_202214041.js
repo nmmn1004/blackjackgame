@@ -13,7 +13,6 @@ function bettingResultWin() {
 
 // 칩
 let chip = {
-  balance : 50000,
   bettingChips : 0,
   refresh : function() { 
     document.getElementById("chipsNumber").innerHTML = ( parseFloat(localStorage.getItem("ownChip")) / 1000).toFixed(1) + "k";
