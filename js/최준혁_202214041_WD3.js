@@ -550,9 +550,9 @@ function backImgLoad() {
   }
 }
 function backgroundMusicPlay() {
-  var music = new Audio('/src/sound/backgroundMusic.mp3');
+  var music = new Audio('src/sound/backgroundMusic.mp3');
   music.currentTime = 0;
-  music.loop();
+  music.loop = true;
   music.muted = false;
   music.play();
   music.volume = 0.2;

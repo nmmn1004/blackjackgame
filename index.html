@@ -20,15 +20,11 @@
     <p class="controlsText">배경음악 볼륨 조절</p><input type="range" id="volume" min="1" max="10" value="2">
   </form> -->
   <aside>
-    <audio src="./src/sound/backgroundMusic.mp3" autoplay loop onloadstart="this.volume = 0.2; this.play();"></audio>
+    <!-- <iframe style="width:0px; height:0px;" src="./src/sound/backgroundMusic.mp3" allow="autoplay; loop;"  onloadstart="this.volume = 0.2"> -->
+    <audio src="./src/sound/backgroundMusic.mp3" onloadstart="this.volume = 0.2; this.play(); this.loop = true;"></audio>
   </aside>
   <footer>
     made by 최준혁.
   </footer>
-  <script>
-    window.onload = function() {
-      backgroundMusicPlay();
-    }
-  </script>
 </body>
 </html>
