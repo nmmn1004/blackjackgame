@@ -174,7 +174,7 @@ function burst() {
   console.log('플레이어 패배');
   alert('플레이어 ' + player.score + '점, 딜러 ' + (dealer.score + dealer.firstScore) + '점으로 플레이어가 패배합니다.');
 
-  var burst = window.open('./최준혁_202214041_WD3-burst.html', 'U R burst', 'width=1200, height=700');
+  var burst = window.open('./최준혁_202214041_burst.html', 'U R burst', 'width=1200, height=700');
 
   chip.bettingReset();
   gameReset();
@@ -186,7 +186,7 @@ function win() {
   console.log('플레이어 승리');
   alert('플레이어 ' + player.score + '점, 딜러 ' + (dealer.score + dealer.firstScore) + '점으로 플레이어가 승리합니다.');
 
-  var win = window.open('./최준혁_202214041_WD3-win.html', 'U R WIN', 'width=1200, height=700');
+  var win = window.open('./최준혁_202214041_win.html', 'U R WIN', 'width=1200, height=700');
 
   localStorage.setItem("ownChip", (parseFloat(localStorage.getItem("ownChip")) + chip.bettingChips * 2));
   chip.bettingReset();
@@ -199,7 +199,7 @@ function push() {
   console.log('무승부');
   alert('플레이어 ' + player.score + '점, 딜러 ' + (dealer.score + dealer.firstScore) + '점으로 무승부됩니다.');
 
-  var push = window.open('./최준혁_202214041_WD3-push.html', 'U R PUSH', 'width=1200, height=700');
+  var push = window.open('./최준혁_202214041_push.html', 'U R PUSH', 'width=1200, height=700');
 
   localStorage.setItem("ownChip", (parseFloat(localStorage.getItem("ownChip")) + chip.bettingChips));
   chip.bettingReset();
