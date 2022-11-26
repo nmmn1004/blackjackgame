@@ -32,6 +32,11 @@ body {
   font-size: 5vh;
   font-weight: 600;
   -webkit-text-stroke: 0.2vh black;
+
+  transition-duration: 0.2s;
+}
+.linkButton a:hover {
+  color: rgba(255, 255, 255, 0.719);
 }
 a {
   text-decoration: none;
@@ -45,11 +50,9 @@ a {
   bottom: 10px;
   right: 10px;
 }
-.history header a, .help header {
-  width: auto;
-  display: inline-block;
+.history header, .history header a, .help header, .record header {
   font-size: 8vh;
-  position: absolute;
+  text-align: center;
   padding-top: 5px;
   left: 45vw;
   color: white;
@@ -57,12 +60,10 @@ a {
   -webkit-text-stroke: 0.2vh black;
 }
 .customizing header {
-  width: auto;
-  display: inline-block;
   font-size: 8vh;
-  position: absolute;
+  text-align: center;
   padding-top: 5px;
-  left: 35vw;
+  left: 45vw;
   color: white;
   font-weight: bolder;
   -webkit-text-stroke: 0.2vh black;
@@ -70,7 +71,7 @@ a {
 .history section article, .help section article {
   font-size: 5vh;
   position: absolute;
-  top: 20vh;
+  /* top: 20vh; */
   color: white;
   font-weight: bolder;
   -webkit-text-stroke: 0.2vh black;
@@ -207,13 +208,13 @@ J, Q, K {
   transition-duration: 0.3s;
 }
 .betButton:hover {
-  background-color: white;
+  background-color: rgba(144, 238, 144, 0.5);
 }
 .hitButton:hover {
-  background-color: white;
+  background-color: rgba(240, 128, 128, 0.5);
 }
 .standButton:hover {
-  background-color: white;
+  background-color: rgba(224, 255, 255, 0.5);
 }
 
 /* Score 표시 테이블 */
@@ -405,14 +406,12 @@ J, Q, K {
   font-weight: 600;
   margin: 5px;
   -webkit-text-stroke: 0.2vh black;
-  background-color: gray;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.164);
   padding: 3px 10px;
   cursor: pointer;
 
   transition-duration: 0.5s;
-}
-.cardImgShop button:hover, .resetButton:hover, .resetButton2:hover {
-  background-color: white;
 }
 .price0 {
   text-decoration: none;
@@ -438,7 +437,8 @@ J, Q, K {
   font-weight: 600;
   margin: 5px;
   -webkit-text-stroke: 0.2vh black;
-  background-color: gray;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.164);
   padding: 3px 10px;
   position: absolute;
   right: 5%;
@@ -454,16 +454,58 @@ J, Q, K {
   font-weight: 600;
   margin: 5px;
   -webkit-text-stroke: 0.2vh black;
-  background-color: gray;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.164);
   padding: 3px 10px;
+  cursor: pointer;
+
+  transition-duration: 0.5s;
+}
+.recordAddButton {
+  text-decoration: none;
+  font-size: 5vh;
+  font-weight: 600;
+  margin: 1vh;
+  -webkit-text-stroke: 0.2vh black;
+  color: white;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.164);
+  padding: 2vh 3vw;
+  cursor: pointer;
+
+  transition-duration: 0.5s;
+}
+.recordAddButtonSmall {
+  text-decoration: none;
+  font-size: 3vh;
+  font-weight: 600;
+  margin: 1vh;
+  -webkit-text-stroke: 0.1vh black;
+  color: white;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.164);
+  padding: 1vh 1.5vw;
   cursor: pointer;
 
   transition-duration: 0.5s;
 }
 
 
-.controls {
-  position: absolute;
-  top: -300%;
+.recordButtons {
+  text-align: center;
+  padding-top: 5vh;
 }
 
+green {
+  color: lightgreen;
+}
+blue {
+  color: lightblue;
+}
+red {
+  color: lightcoral;
+}
+
+.cardImgShop button:hover, .resetButton:hover, .resetButton2:hover, .recordButton:hover, .recordAddButton:hover, .recordAddButtonSmall:hover {
+  background-color: rgba(255, 255, 255, 0.719);
+}

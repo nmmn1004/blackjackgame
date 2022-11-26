@@ -12,19 +12,8 @@
     window.onload = function() {
       clickSoundPlay();
       chip.refresh();   
-
-      const resetCardButton = document.getElementById('resetCardButton');
-
-      resetCardButton.addEventListener("click", cardReset);
-
-      function cardReset(e) {
-        localStorage.setItem("card1", 0);
-        localStorage.setItem("card2", 0);
-        localStorage.setItem("card3", 0);
-        localStorage.setItem("card4", 0);
-        localStorage.setItem("backImg", 0);
-        alert("초기화 되었습니다.");
-      } 
+      // const resetCardButton = document.getElementById('resetCardButton');
+      // resetCardButton.addEventListener("click", cardReset);
     }
   </script>
   <a class="backButton" href="index.html">&lt;</a>
@@ -42,14 +31,14 @@
       <td class="price">60.0k</td>
       <td class="price">60.0k</td>
       <td class="price">120.0k</td>
-      <td class="price">150.k</td></tr>
-    <tr><td><button onclick="buyBackImg(0);">구매</button><button onclick="apply(0);">적용</button></td>
-      <td><button onclick="buyBackImg(1);">구매</button><button onclick="apply(1);">적용</button></td>
-      <td><button onclick="buyBackImg(2);">구매</button><button onclick="apply(2);">적용</button></td>
-      <td><button onclick="buyBackImg(3);">구매</button><button onclick="apply(3);">적용</button></td>
-      <td><button onclick="buyBackImg(4);">구매</button><button onclick="apply(4);">적용</button></td></tr>
+      <td class="price">150.0k</td></tr>
+    <tr><td><button onclick="buyBackImg(0);">기본</button><button onclick="apply(0);"><green>적용</green></button></td>
+      <td><button onclick="buyBackImg(1);"><red>구매</red></button><button onclick="apply(1);"><green>적용</green></button></td>
+      <td><button onclick="buyBackImg(2);"><red>구매</red></button><button onclick="apply(2);"><green>적용</green></button></td>
+      <td><button onclick="buyBackImg(3);"><red>구매</red></button><button onclick="apply(3);"><green>적용</green></button></td>
+      <td><button onclick="buyBackImg(4);"><red>구매</red></button><button onclick="apply(4);"><green>적용</green></button></td></tr>
   </tbody>
-  <button class="resetButton" id="resetCardButton">초기화</button>
+  <!-- <button class="resetButton" id="resetCardButton">초기화</button> -->
   <aside>
     <audio id="audioPlayer" src="src/sound/BGM_customizing.mp3" autoplay loop onloadstart="this.volume = 0.2; this.play();"></audio>
   </aside>

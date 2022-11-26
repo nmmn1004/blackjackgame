@@ -1,13 +1,14 @@
 // 시작 시 사운드 출력
 window.onload = function() {
   clickSoundPlay();
+  chip.setting();
 }
 
 function bettingResult() {
-  document.getElementById('bettingChipsResult').innerHTML = ( parseFloat(localStorage.getItem("bettingChips")) / 1000).toFixed(1) + "k";
+  document.getElementById('bettingChipsResult').innerHTML = localStorage.getItem("bettingChips").replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 function bettingResultWin() {
-  document.getElementById('bettingChipsResult').innerHTML = ( (parseFloat(localStorage.getItem("bettingChips")) / 1000)*2).toFixed(1) + "k";
+  document.getElementById('bettingChipsResult').innerHTML = (parseFloat(localStorage.getItem("bettingChips")) * 2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 
@@ -18,7 +19,7 @@ let chip = {
     document.getElementById("chipsNumber").innerHTML = ( parseFloat(localStorage.getItem("ownChip")) / 1000).toFixed(1) + "k";
   },
   betting : function(bet) {
-    document.getElementById("bettingNumber").innerHTML = bet;
+    document.getElementById("bettingNumber").innerHTML = bet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     localStorage.setItem("bettingChips", bet);
     localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - bet);
   },
@@ -39,7 +40,11 @@ let chip = {
       console.log("칩 세팅 완료");
     }
     console.log(localStorage.getItem("first") + " : first");
-  }
+  },
+  bug : function() {
+    localStorage.setItem("ownChip", 390000);
+    chip.refresh();
+  },
 }
 // 딜레이 시간
 const setTime = 10000;
@@ -107,6 +112,12 @@ function betting() {
     console.log(dealer.score + dealer.firstScore + ' : 딜러의 현재 점수');
     // 위의 행위를 dealer - player - dealer - player 순으로 반복
     console.log(localStorage.getItem("ownChip") + "현재 소유한 chip");
+    if (burstCheck(player)) {
+      let firstCard = document.getElementsByClassName('firstCard');
+      cardCheck(firstCard);
+
+      setTimeout(burst(), setTime);
+    }
   }
 }
 // hit 버튼을 누를 시 실행
@@ -546,14 +557,7 @@ function backImgLoad() {
     return "./src/img/cardBackImg_0.png";
   }
 }
-// function backgroundMusicPlay() {
-//   var music = new Audio('src/sound/backgroundMusic.mp3');
-//   music.currentTime = 0;
-//   music.loop = true;
-//   music.muted = false;
-//   music.play();
-//   music.volume = 0.2;
-// }
+
 
 
 // 커스터마이징
@@ -562,13 +566,13 @@ function buyBackImg(card) {
 
  if (select) {
   if (card == 1) {
-    if (parseFloat(localStorage.getItem("ownChip")) >= 10000){
+    if (parseFloat(localStorage.getItem("ownChip")) >= 60000){
       if (localStorage.getItem("card1") == "1"){
         alert('이미 구매한 카드입니다.');
       }
       else {
         localStorage.setItem("card1", 1);
-        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 10000 );
+        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 60000 );
         chip.refresh();
         alert('구매 완료되었습니다.');
       }
@@ -578,13 +582,13 @@ function buyBackImg(card) {
     }
   }
   else if (card == 2) {
-    if (parseFloat(localStorage.getItem("ownChip")) >= 10000){
+    if (parseFloat(localStorage.getItem("ownChip")) >= 60000){
       if (localStorage.getItem("card2") == "1"){
         alert('이미 구매한 카드입니다.');
       }
       else {
         localStorage.setItem("card2", 1);
-        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 10000 );
+        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 60000 );
         chip.refresh();
         alert('구매 완료되었습니다.');
       }
@@ -594,13 +598,13 @@ function buyBackImg(card) {
     }
   }
   else if (card == 3) {
-    if (parseFloat(localStorage.getItem("ownChip")) >= 10000){
+    if (parseFloat(localStorage.getItem("ownChip")) >= 120000){
       if (localStorage.getItem("card3") == "1"){
         alert('이미 구매한 카드입니다.');
       }
       else {
         localStorage.setItem("card3", 1);
-        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 10000 );
+        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 120000 );
         chip.refresh();
         alert('구매 완료되었습니다.');
       }
@@ -610,13 +614,13 @@ function buyBackImg(card) {
     }
   }
   else if (card == 4) {
-    if (parseFloat(localStorage.getItem("ownChip")) >= 10000){
+    if (parseFloat(localStorage.getItem("ownChip")) >= 150000){
       if (localStorage.getItem("card4") == "1"){
         alert('이미 구매한 카드입니다.');
       }
       else {
         localStorage.setItem("card4", 1);
-        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 10000 );
+        localStorage.setItem("ownChip", parseFloat(localStorage.getItem("ownChip")) - 150000 );
         chip.refresh();
         alert('구매 완료되었습니다.');
       }
@@ -702,15 +706,71 @@ function apply(card) {
 
 
 
-// 볼륨조절 실패작
-// const audio = document.getElementById('audioPlayer');
-// const audioVolume = document.getElementById('volume');
 
-// audioVolume.addEventListener("change", function(e) {
-//   localStorage.setItem("volume", (this.value / 10));
-//   audio.volume = parseFloat(localStorage.getItem("volume"));
-// })
+var record = document.getElementById('recordButton');
+var load = document.getElementById('loadButton');
+var del = document.getElementById('deleteButton');
 
-// function volumeControl() {
-//   audio.volume = parseFloat(localStorage.getItem("volume"));
-// }
+record.addEventListener('click', addRecord);
+load.addEventListener('click', loadScore);
+del.addEventListener('click', deleteScore);
+
+function addRecord() {
+  let ans = confirm('현재 보유 중인 chip을 저장하시겠습니까?');
+  if (ans == true) {
+    let name = prompt('이름을 입력해주세요.');
+    if(name == null || name == "") {
+      alert('이름을 입력하지 않았습니다.');
+    }
+    else if(localStorage.getItem(name) == name) {
+
+    }
+    else {
+      saveScore(name);
+    }
+  }
+}
+
+function saveScore(name) {
+  let ans = confirm(name + '(으)로 저장할까요?');
+    if (ans) {
+      localStorage.setItem(name, localStorage.getItem('ownChip'));
+      alert('저장되었습니다. ' + name + '(으)로 조회할 수 있습니다.');
+    }
+    else {
+      alert('저장되지 않았습니다.');
+    }
+}
+
+function loadScore() {
+  let score = localStorage.getItem(prompt('이름을 입력해주세요.'));
+  if (score == null) {
+    alert('기록되어있지 않습니다.');
+  }
+  else {
+    alert(score.replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "점으로 기록되어 있습니다.");
+  }
+}
+
+function deleteScore() {
+  let name = prompt('이름을 입력해주세요.');
+  if (localStorage.getItem(name) == null) {
+    alert('기록되어있지 않습니다.');
+  }
+  else {
+    localStorage.removeItem(name);
+    alert('삭제되었습니다.');
+  }
+}
+const resetCardButton = document.getElementById('resetCardButton');
+
+resetCardButton.addEventListener("click", cardReset);
+
+function cardReset() {
+  localStorage.setItem("card1", 0);
+  localStorage.setItem("card2", 0);
+  localStorage.setItem("card3", 0);
+  localStorage.setItem("card4", 0);
+  localStorage.setItem("backImg", 0);
+  alert("초기화 되었습니다.");
+} 

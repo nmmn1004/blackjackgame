@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="./css/최준혁_202214041.css">
+  <title>blackJackRecord</title>
+</head>
+<body class="record">
+  <header>
+    기록
+  </header>
+  <a class="backButton" href="index.html">&lt;</a>
+  <div class="recordButtons">
+    <button class="recordAddButton" id="recordButton"><green>저장하기</green></button>
+    <br>
+    <button class="recordAddButton" id="loadButton"><blue>조회하기</blue></button>
+    <br>
+    <button class="recordAddButton" id="deleteButton" style="margin-bottom: 15vh;"><red>삭제하기</red></button>
+    <br>
+    <button class="recordAddButtonSmall" id="deleteButton" onclick="chip.reset()"><red>칩 초기화</red></button>
+    <br>
+    <button class="recordAddButtonSmall" id="resetCardButton"><red>커스터마이징 초기화</red></button>
+    <br>
+    <button class="recordAddButtonSmall" id="deleteButton" onclick="localStorage.clear(); alert('모든 진행 사항이 초기화 되었습니다.')"><red>모든 진행 사항 초기화</red></button>
+  </div>
+  <aside>
+    <audio src="./src/sound/backgroundMusic.mp3" autoplay loop onloadstart="this.volume = 0.2;"></audio>
+  </aside>
+  <script type="text/javascript" src="./js/최준혁_202214041.js"></script>
+</body>
+</html>
